@@ -67,7 +67,7 @@ def get_all_tweets(screen_name):
 	# import ipdb; ipdb.set_trace()
 	
 	#write the csv	
-	with open('%s_tweets.csv' % screen_name, 'w') as f:
+	with open('%s_tweets.csv' % screen_name, 'w', encoding = "utf-8") as f:
 		writer = csv.writer(f)
 		writer.writerow(["id","created_at","text", "fav"])
 		writer.writerows(outtweets)
